@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>HTML5 Demos</h1>
+    <hr>
+    <form action="">
+        <!-- div>(label{Enter your name}+input[required][minlength=4]) -->
+        <div>
+            <label for="">Enter your name</label>
+            <input name="username" type="text" required minlength="4">
+        </div>
+
+        <div>
+            <label for="">Enter your email</label>
+            <input name="email" type="email" required >
+        </div>
+
+        <div>
+            <label for="">Enter your mobile number</label>
+            <input name="mobile" type="tel" required pattern="^\d{10}$" >
+        </div>
+
+        <!-- div>button[type=submit]{Submit data} -->
+        <div>
+            <button type="submit">Submit data</button>
+        </div>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5 Demos</title>
+</head>
+
+<body>
+    <h1>HTML5 Demos</h1>
+    <hr>
+    <div>
+        <input style="width: 100%" type="range" min="100" max="1000" value="400">
+    </div>
+
+    <img src="./assets/images/cute-puppy.jpg" alt="image of a cute puppy" title="image of a cute puppy">
+
+    <script>
+        var rng = document.querySelector('input[type=range]');
+        var img = document.querySelector('img');
+        // rng.oninput = function(evt){
+        //     img.style.width = evt.target.value + 'px';
+        // };
+
+        // rng.addEventListener('input', function(){});
+
+        rng.addEventListener('input', function(evt){
+            img.style.width = evt.target.value + 'px';
+        });
+    </script>
+</body>
+
+</html>

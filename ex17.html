@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3 Demos </title>
+    <style>
+        .container > div {
+            min-height: 300px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .sidebar {
+            background-color: lavender;
+            width: 18%;
+        }
+        .main-content {
+            background-color: khaki;
+            width: 60%;
+        }
+        .lead {
+            font-size: 20pt;
+        }
+
+        .img-responsive {
+            max-width: 100%; /* of the container */
+        }
+
+        @media screen and (max-width: 600px){
+            .sidebar:first-of-type {
+                display: none;
+            }
+            .sidebar, .main-content {
+                width: 100%;
+            }
+            .lead {
+                font-size: 15pt;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <p class="lead">This is sidebar#1</p>
+        </div>
+        <div class="main-content">
+            This is the main content area
+            <div>
+                <img src="./assets/images/cute-puppy.jpg" class="img-responsive">
+            </div>
+        </div>
+        <div class="sidebar">
+            <p class="lead">This is sidebar#2</p>
+        </div>
+    </div>
+</body>
+</html>

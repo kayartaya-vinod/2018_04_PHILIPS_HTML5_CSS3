@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #img1 {
+            width: 200px;
+            opacity: 0.1;
+        }
+
+        @keyframes shakeAnim {
+            0% {
+                transform: translateX(0px);
+            }
+            33% {
+                transform: translateX(30px);
+            }
+            50% {
+                transform: translateX(0px);
+            }
+            66% {
+                transform: translateX(-30px);
+            }
+            100% {
+                transform: translateX(0px);
+                opacity: 1;
+            }
+        }
+
+        .shake:hover {
+            animation: shakeAnim .25s ease-in-out 4;
+        }
+
+
+        @keyframes pauseRotateEffect {
+            40% {
+                transform: rotateX(360deg);
+            }
+            50% {
+                transform: rotateY(-360deg);
+            }
+        }
+
+        .pause-rotate {
+            animation: pauseRotateEffect 8s infinite;
+        }
+
+        @keyframes slideOutAnim {
+            100% {
+                transform: translateX(1000px);
+            }
+        }
+
+        .slideout {
+            animation: slideOutAnim 2s ease-out;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align:center" class="pause-rotate">CSS3 Demos</h1>
+    <img src="./assets/images/cute-puppy.jpg" id="img1" class="shake">
+    <img src="./assets/images/cute-puppy.jpg" id="img2" >
+
+    <script>
+        var img2 = document.querySelector('#img2');
+        img2.addEventListener('click', function(){
+            img2.setAttribute('class', 'slideout');
+            setTimeout(function(){
+                img2.style.visibility = 'hidden';
+            }, 2000);
+        });
+    </script>
+</body>
+
+</html>

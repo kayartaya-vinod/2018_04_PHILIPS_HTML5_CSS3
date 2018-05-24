@@ -1,0 +1,14 @@
+CACHE MANIFEST
+
+# The following files will be cached
+# and rest of the files will be served from the server
+# only when online....
+
+
+CACHE:
+./ex06.js
+./ex06.css
+./assets/images/tampa.jpg
+
+NETWORK:
+*

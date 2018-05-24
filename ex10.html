@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3 Demos</title>
+
+    <style>
+        body {
+            background-color: #777;
+        }
+        img:first-of-type {
+            border-radius: 15px;
+            box-shadow: -20px 20px #000;
+            margin-left: 50px;
+        }
+
+        img#tampa {
+            border-radius: 15px;
+        }
+        img#tampa:hover {
+            box-shadow: 0 0 100px yellow;
+        }
+        #d1 {
+            border: 1px solid white;
+            margin-left: 100px;
+        }
+        div#d2, div#d3 {
+            border: 1px solid black;
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+        }
+        #d2 {
+            margin-left: 50px;
+        }
+        #d3 {
+            margin-left: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS3 Demos</h1>
+    <hr>
+    <img src="./assets/images/cute-puppy.jpg" >
+    <img id="tampa" src="./assets/images/tampa.jpg">
+
+
+    <div id="d1">
+        <div id="d2"></div>
+        <div id="d3"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5 Demos</title>
+</head>
+
+<body>
+    <h1>HTML5 Demos</h1>
+    <hr>
+
+    <div id="map" style="width:800px;height:600px"></div>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBqzZW3xmX6nlPrJgANxLo6qOZ3lKX9TGc"></script>
+    <script>
+        var geo = window.navigator.geolocation;
+        geo.getCurrentPosition(showMap);
+
+        function showMap(gps) {
+            var lat = gps.coords.latitude;
+            var lon = gps.coords.longitude;
+
+            var mapOptions = {
+                zoom: 17,
+                center: { lat: lat, lng: lon },
+                mapTypeId: 'satellite'
+            };
+            map = new google.maps.Map(document.getElementById('map'), mapOptions);
+            var marker = new google.maps.Marker({
+                position: { lat: lat, lng: lon },
+                map: map
+            });
+        }
+    </script>
+</body>
+
+</html>

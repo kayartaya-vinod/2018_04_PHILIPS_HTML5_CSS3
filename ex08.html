@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5 Demos</title>
+</head>
+
+<body>
+    <h1>HTML5 Demos</h1>
+    <hr>
+
+    <script>
+        function sleep(duration) {
+            var ms1 = Date.now();
+            while ((Date.now() - ms1) < duration);
+        }
+
+        function execAfterDelay(callback, duration) {
+            if(typeof callback!='function') {
+                throw 'callback was not a function';
+            }
+            if(typeof duration !='number' || duration<0) {
+                throw 'duration was not a valid number';
+            }
+
+            sleep(duration);
+            callback();
+        }
+
+        console.log('start of script!');
+
+        setTimeout(function(){
+            console.log('executing after a delay of 10 seconds')
+        }, 10000);
+
+        console.log('end of script');
+    </script>
+</body>
+
+</html>
